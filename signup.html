@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Register | Space Shuttle</title>
+        <link rel ="stylesheet" href="Css/signup.css"></link>
+  </head>
+  <style>
+  body{
+    background-image: url("Images/ssss.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  footer{
+    color:white;
+    font-size: 25px;
+    text-align: center;
+    background-color:#8b4513;
+  }
+
+  </style>
+  <body>
+    <script>
+    function validateForm() {
+      var x = document.forms["myForm"]["fname"].value;
+      if (x == "" || x == null) {
+        alert("Nothing Should be left blank !");
+        return false;
+      }
+    }
+    </script>
+    <h3>Registration Page</h3>
+
+  <form id="regForm" action="insert.php" method="POST">
+
+    <div>
+    <label for="name">Username:</label>
+    <input type="text" id="username" name ="username" required placeholder="Create a Username">
+    </div>
+    <div>
+    <label for="password">Password:</label>
+    <input type="Password" id="password" name="password" required placeholder="Create a password">
+    </div>
+    <div>
+    <label for "confirmpassword">Re-enter Password</label>
+    <input type ="password" id ="password2" name ="confirm_password" required placeholder="Re-enter your password">
+    </div>
+<input type="submit" id="submit" value="Submit" onclick="validateForm() , event.preventDefault()">
+
+  <script>
+    function validateForm(){
+    var pass1 = document.getElementById("password").value;
+           var pass2 = document.getElementById("password2").value;
+           if (pass1 != pass2) {
+               alert("Passwords do not match ! , Please refresh the page and re-enter the password . ");
+return false
+}
+if(pass1 =pass){
+  return true;
+}
+       }
+      </script>
+      <footer>Created by Prajwal of AFGJI
+      Copyright &copy; 2020 AFGJI</footer>
+  </body>
+</html>
